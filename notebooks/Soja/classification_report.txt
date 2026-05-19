@@ -1,0 +1,17 @@
+                       precision    recall  f1-score   support
+
+          Crestamento       1.00      1.00      1.00         1
+             Ferrugem       1.00      0.73      0.84        11
+         Mancha_Parda       1.00      1.00      1.00        13
+      Mosaico_Amarelo       0.94      1.00      0.97        17
+                Oidio       1.00      1.00      1.00        22
+         Podridao_Sul       0.91      1.00      0.95        10
+    Queima_Bacteriana       1.00      1.00      1.00        14
+           Septoriose       0.67      1.00      0.80         4
+Sindrome_Morte_Subita       1.00      1.00      1.00        17
+        Soja_Saudavel       1.00      1.00      1.00       764
+        Virus_Mosaico       1.00      0.75      0.86         4
+
+             accuracy                           1.00       877
+            macro avg       0.96      0.95      0.95       877
+         weighted avg       1.00      1.00      1.00       877

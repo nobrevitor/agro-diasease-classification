@@ -629,6 +629,11 @@ Fluxo previsto:
 Usuário → Streamlit → FastAPI → Modelo → Predição
 ```
 
+
+### Link de acesso ao App:
+
+[AgroVisionAI](https://agro-diasease-classification.streamlit.app/)
+
 ---
 
 ## Tecnologias Utilizadas

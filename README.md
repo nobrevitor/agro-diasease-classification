@@ -69,21 +69,25 @@ agro-disease-classification/
 │       ├── 02_training_mlflow.ipynb
 │       └── 03_evaluation.ipynb
 │
-└── src/
-    ├── dataset/
-    │   ├── milho_dataset.py
-    │   └── soja_dataset.py
-    |
-    ├── models/
-    │   ├── milho_model.py
-    │   └── soja_model.py
-    │
-    ├── preprocessing/
-    │   ├── milho_preprocessing.py
-    │   └── soja_preprocessing.py
-    │
-    ├── train.py
-    └── evaluate.py
+├── src/
+|   ├── dataset/
+|   │   ├── milho_dataset.py
+|   │   └── soja_dataset.py
+|   |
+|   ├── models/
+|   │   ├── milho_model.py
+|   │   └── soja_model.py
+|   │
+|   ├── preprocessing/
+|   │   ├── milho_preprocessing.py
+|   │   └── soja_preprocessing.py
+|   │
+|   ├── train.py
+|   └── evaluate.py
+|
+└── streamlit/
+    ├── app.py
+    └── requirements.txt
 ```
 
 ---
@@ -320,7 +324,7 @@ Portanto, para os experimentos realizados com a cultura de milho, a combinação
 
 ---
 
-## Treinamento e experimentação dos modelos — Soja
+## Treinamento e Experimentação dos Modelos — Cultura de Soja
 
 Esta etapa teve como objetivo comparar o desempenho de diferentes arquiteturas de redes neurais para classificação de doenças em folhas de soja. Assim como nos experimentos com milho, foram avaliadas duas estratégias de treinamento:
 
@@ -342,11 +346,13 @@ Durante a fase de validação do modelo de soja, identificamos um cenário de ov
 
 Ajuste de Hiperparâmetros: Refinamos a taxa de aprendizado (LR ou Learning Rate) para permitir uma convergência mais estável e evitar que o modelo ficasse "preso" em mínimos locais de ruído dos dados de treino. 
 
-Data Augmentation Estratégico: 
+**Data Augmentation Estratégico:**
 
-    Classes Minoritárias: Aplicamos um aumento agressivo de dados (rotações, flips, ajustes de brilho e contraste) para equilibrar a representatividade dessas classes.
-    Classes Majoritárias: Reduzimos drasticamente o volume de dados e a intensidade das transformações para evitar que o modelo se tornasse tendencioso (bias) para as classes com mais amostras.
-    Validação Cruzada: O loop de teste foi reestruturado para garantir que a normalização dos dados de produção fosse idêntica à do treinamento.
+- Classes Minoritárias: Aplicamos um aumento agressivo de dados (rotações, flips, ajustes de brilho e contraste) para equilibrar a representatividade dessas classes;
+
+- Classes Majoritárias: Reduzimos drasticamente o volume de dados e a intensidade das transformações para evitar que o modelo se tornasse tendencioso (bias) para as classes com mais amostras;
+
+- Validação Cruzada: O loop de teste foi reestruturado para garantir que a normalização dos dados de produção fosse idêntica à do treinamento.
 
 ---
 
@@ -629,6 +635,9 @@ Usuário → Streamlit → FastAPI → Modelo → Predição
 
 * Python
 * PyTorch
+* Numpy
+* Seaborn
+* Matplotlib
 * Torchvision
 * Scikit-learn
 * MLflow

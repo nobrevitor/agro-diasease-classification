@@ -655,7 +655,7 @@ Usuário → Streamlit → FastAPI → Modelo → Predição
 ## Colaboradores
 
 * **Vitor Nobre** – Data Scientist / ML Engineer
-* **Jefferson** – Cientista da Computação
+* **Jefferson** – Data Scientist / ML Engineer
 
 ---
 
